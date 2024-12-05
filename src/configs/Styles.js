@@ -1,0 +1,9 @@
+export const gradientText = `w-max  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-fuchsia-500`;
+export const gradientText2 = `w-max bg-gradient-to-br from-blue-500 to-violet-600 z dark:to-violet-200 text-transparent bg-clip-text`;
+export const dbgGradient = `bg-gradient-to-br from-blue-400 to-fuchsia-500`;
+export const lbgGradient = `bg-gradient-to-br from-blue-500 to-teal-400`;
+export const styleHere = `bg-blue-50 text-tertiary w-[80%] rounded-md px-3 py-1 outline-none font-bold mx-auto`;
+export const styleHere1 = `flex justify-center items-center bg-gradient-to-br from-blue-400 to-fuchsia-500 dark:from-blue-500 dark:to-violet-600 hover:bg-violet-300 cursor-pointer hover:scale-90 hover:rounded-md`;
+export const animate = `[background:linear-gradient(45deg,#172033,theme(colors.neutral.950)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.50)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.50/.48))_border-box] rounded-2xl border border-transparent animate-border`;
+export const bgGradient = `bg-gradient-to-br dark:from-fuchsia-500 dark:to-cyan-500 from-cyan-500 to-blue-500`;
+export const textGradient = `bg-gradient-to-r dark:from-fuchsia-500 dark:to-cyan-500 from-cyan-500 to-blue-500 text-transparent bg-clip-text;`;

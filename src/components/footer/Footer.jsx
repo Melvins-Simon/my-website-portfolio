@@ -10,7 +10,7 @@ const Footer = () => {
       >
         <div>
           <span className={` text-sm ${textGradient} bg-clip-text font-bold`}>
-            Copyright © 2024 Melvins Simon Omari
+            Copyright © 2025 Melvins Simon Omari
           </span>
         </div>
         <div

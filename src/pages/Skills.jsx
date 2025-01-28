@@ -29,7 +29,7 @@ const Skills = () => {
       id="skills"
       className={`${darkTheme ? "bg-tertiary" : "bg-secondary"} ${
         WIDTH >= 768 ? "h-screen" : "h-max"
-      } container mx-auto text-blue-200 dark:text-blue-50 py-20 relative font-circular-web`}
+      } container mx-auto text-blue-200 dark:text-blue-50 pt-20 relative font-circular-web `}
     >
       <div className="container mx-auto w-[80%] h-full  flex items-center">
         <div
@@ -37,7 +37,7 @@ const Skills = () => {
             WIDTH >= 768
               ? "flex justify-center items-center flex-col"
               : "flex  flex-col"
-          }  gap-10 h-max  w-full -mt-20`}
+          }  gap-10 h-max  w-full -mt-10`}
         >
           <div className={`place-items-center`}>
             <h2
@@ -58,21 +58,31 @@ const Skills = () => {
           </div>
 
           <div
-            className={`flex flex-wrap justify-between h-[40%] w-full gap-3`}
+            className={`${
+              WIDTH > 420
+                ? "grid grid-cols-3 h-[40%] w-full gap-8"
+                : "grid grid-cols-1 gap-2 place-items-center"
+            } mt-20`}
           >
             {techs.map(({ id, icon, label, dur, cert, prog }) => (
               <motion.div
                 variants={iconVariants(dur)}
                 initial="initial"
                 animate="animate"
-                className={`${animate} overflow-hidden grid grid-rows-[2fr_2fr_0.5fr]`}
+                className={`${animate} overflow-hidden w-[80%] grid grid-rows-[2fr_2fr_0.5fr] ${
+                  WIDTH < 420 && "w-[90%]"
+                }`}
                 key={id}
               >
                 <div className="p-4 bg-blue-200 flex justify-center items-center">
                   {icon}
                 </div>
                 <div
-                  className={`flex flex-col justify-center gap-2 font-circular-web font-bold text-blue-75  h-full  p-3`}
+                  className={`flex flex-col justify-center ${
+                    WIDTH > 1400 && "items-center"
+                  } gap-2 font-circular-web font-bold text-blue-75  h-full  p-3 ${
+                    WIDTH < 420 && "items-center"
+                  }`}
                 >
                   <div>
                     Skill:{" "}
@@ -82,14 +92,7 @@ const Skills = () => {
                       {label}
                     </span>
                   </div>
-                  <div>
-                    Certified:{" "}
-                    <span
-                      className={` ${textGradient} bg-clip-text text-sm font-normal`}
-                    >
-                      {cert}
-                    </span>{" "}
-                  </div>
+                  <div>Certified</div>
                   <div>
                     Profficiency:{" "}
                     <span
@@ -99,15 +102,11 @@ const Skills = () => {
                     </span>
                   </div>
                 </div>
-                <div className="flex justify-center items-center text-blue-75 hover:bg-blue-600 duration-300 ease-in-out bg-blue-800">
-                  <button>Certificate</button>
-                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
-      <Scroller up={"hero"} down={"projects"} />
     </div>
   );
 };

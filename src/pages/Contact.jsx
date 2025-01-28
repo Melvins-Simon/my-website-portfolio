@@ -18,21 +18,6 @@ const Contact = () => {
       >
         <ContactSect />
       </div>
-      <div className="absolute right-0 left-0 mx-auto bottom-2 h-10 w-6 rounded-full border-[2px] overflow-hidden cursor-pointer z-10">
-        <div
-          onClick={() => {
-            const element = document.getElementById("projects");
-            element.scrollIntoView({ behavior: "smooth" });
-          }}
-          className={`${
-            darkTheme ? dbgGradient : lbgGradient
-          } w-full h-full relative`}
-        >
-          <BiArrowFromBottom
-            className={`text-xl rounded-full  absolute bottom-1 animate-bounce font-bold right-0 left-0 mx-auto text-yellow-300`}
-          />
-        </div>
-      </div>
     </div>
   );
 };

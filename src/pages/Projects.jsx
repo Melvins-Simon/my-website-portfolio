@@ -94,7 +94,6 @@ const Projects = () => {
           parag={`The analog stopwatch, built with HTML5, CSS, and JavaScript, displays the current system time using moving hour, minute, and second hands. `}
         />
       </div>
-      <Scroller up={"skills"} down={"contacts"} />
     </div>
   );
 };
